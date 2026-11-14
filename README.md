@@ -66,10 +66,65 @@
 
 - Week replanning now uses one planner: missed sessions, volume deficits against Forge's bands, readiness, the minutes you have each day (chips on Week), exercise priority and fatigue. Fatigue check separates local muscle fatigue from body-wide fatigue; a local trim happens only at Moderate confidence and can be undone with Keep full volume. A Recomposition card reads weight and waist trends with steps, training and your optional calorie target, and suggests a small calorie change only after several gates pass. Every recommendation has a Why link showing the reasoning, the data, the confidence and what would change it. All on-device; thresholds are Forge judgement and are not validated on real data yet.
 
+## Treadmill and Forge Score (v34)
+
+- Progress > Cardio logs treadmill sessions as segments of speed and incline, live (with a timer) or after the fact, and shows a weekly minutes target, a plan, trends and your sessions. The target (about 90 to 120 minutes a week in 3 to 5 sessions, on non-leg days first) is a judgement default: no trial gives an ideal treadmill speed, incline or minutes cut-off for people who lift. Energy is an estimate from the ACSM equations and never changes calorie advice by itself.
+- The You tab shows the Forge Score (0 to 1000), made of Growth (strength against your own start, momentum, body direction) and Form (consistency, training dose, habits), plus level, XP, weekly streak, quests and badges. It is a motivational composite built from your own logs, not a validated measure of muscle gain. Everything except badge dates and weekly snapshots is derived from your logs.
+- Appearance can be Auto, Light or Dark. Fonts now sit in both the repo root and `fonts/`, so either layout works.
+
+## Profile, goals and plan (v36)
+
+- First launch on a fresh install runs a short setup (name, focus, time per day, optional focus muscles, starting measurements). Existing installs see a dismissible card on Today. You can change everything later on the You tab.
+- You > Goals tracks weight, waist or lift targets from your own logs and projects a date only when your trend supports one.
+- You > Plan sets your usual minutes per weekday (or Off), up to two focus muscles and lets you reset exercise swaps. These feed the existing planner; the base programme is unchanged.
+- You > Profile > App shows the installed version, checks GitHub for a newer one (Update now), and has Force reload, which clears the offline cache and loads fresh files without touching your data. Reset app erases all data on the device after two confirmations. When you publish a new version, bump the version in `patch.py` style (cache name in `sw.js` and the version shown in the app must match).
+
+## Look and feel (v37)
+
+The dock, tab switchers, sheets, notices and the week strips use frosted glass over a soft ambient backdrop, in light and dark. Devices or settings that cannot do it (no backdrop-filter, or Reduce transparency on) get plain solid panels. The styling lives in the last style block of `index.html` (the one that starts with the v37 comment).
+
+## Motion (v38)
+
+Screens slide in the direction you navigate, tab switchers glide on a spring thumb, cards ease in as you scroll, sheets can be swiped down to dismiss, and finishing a session gets a short celebration. Everything switches off when the device has Reduce motion turned on. The code is the last style block and the last script block in `index.html` (both start with a v38 comment).
+
 ## Handover lives in the code
 
 index.html contains a plain-text block (script id="handover") with the full handover, the changelog and the standing rule: every change made in any chat is written into that block in the same delivery, so no separate handover is needed. Read it first.
 
 ## Shipping an update
 
-Replace the app files, then change the `CACHE` version in `sw.js` (for example, from `forge-v32` to `forge-v33`). Open the site online once and reload it to install the new app shell. Keep the published URL unchanged so the browser keeps access to the same local data.
+Replace the app files, then change the `CACHE` version in `sw.js` (for example, from `forge-v37` to `forge-v38`). Open the site online once and reload it to install the new app shell. Keep the published URL unchanged so the browser keeps access to the same local data.
+
+## Silhouette (v39)
+
+- Torso, neck, head and leg profiles in the side and front/back figures were reshaped (V-taper, trapezius slope, jaw, fuller thigh and calf). Ghosts, path trace and alignment guide are unchanged.
+- v39 also adds trapezius, neck, clavicle and leg detail to the front and back figures, two fibre lines per muscle, deeper muscle shading and a larger demo stage.
+
+## 3D figure (v40)
+
+- The Movement view now renders a lit 3D anatomical figure (three.js, embedded in index.html) with lofted, striated muscles, glowing working muscles, drag-to-rotate and a Classic toggle. Right position and Mistakes still use the SVG engine.
+- three.js r160 is MIT licensed and embedded in index.html, so the app works as a single file.
+
+## Week tab (v41)
+
+- The Replanned week card is now a clean grid: muscle name, one status on the right, a clipped done/planned bar, and a single detail line.
+
+## 3D cleanup (v43)
+
+- Smooth body shells with muscles painted on the surface, arms outside the torso, near-profile cameras for side exercises, better head and neck proportions.
+
+## Face and exercise check (v44)
+
+- Detailed face (front vs back), lateral arm paths for fly, Y raise, pulldown, bench, rows, wall behind the figure for wall slides.
+
+## Form audit (v45)
+
+- Measured every exercise pose against published form standards and corrected pec fly, leg press, cable crunch, RDL, seated shoulder press, bench and incline press, chest-supported row.
+
+## App shell (v46)
+
+- Sticky app header with the coach button, cleaner Weekly sets card and exercise rows.
+
+## Clarity pass (v47)
+
+- Real app icon and a new wordmark in the header, fonts embedded so they load from any URL, explanations tucked behind small (i) buttons, repeated information shown once, tighter spacing.
