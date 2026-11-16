@@ -128,3 +128,31 @@ Replace the app files, then change the `CACHE` version in `sw.js` (for example, 
 ## Clarity pass (v47)
 
 - Real app icon and a new wordmark in the header, fonts embedded so they load from any URL, explanations tucked behind small (i) buttons, repeated information shown once, tighter spacing.
+
+## v52
+
+- Eight swap-only exercises from the owner's gym routine and a Classic split option (You > Plan). New demos reuse the nearest existing animation.
+
+## v53
+
+- Skull crusher; own animations for all new exercises.
+
+## v54
+
+- Face pull rope-high cue and swaps; pose and cue audit fixes for the new exercises.
+
+## v55
+
+- Rendered-and-fixed pass: bent-over row, lying leg curl (prone), face pull rope and high pulley.
+
+## v56
+
+- Wrist curl and reverse wrist curl (new Forearms group, scheduled), posture/mistake/tempo data for every new exercise.
+
+## v57
+
+- + Add exercise to today's session (Today list and in-session Exercises sheet), with search, set count and remove.
+
+## v58
+
+- Audit fixes: atomic workout and treadmill saves, backup round trip (split included), added-exercise limits and cleanup, midnight date attribution.
