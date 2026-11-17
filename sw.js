@@ -1,4 +1,4 @@
-const CACHE = 'forge-v58';
+const CACHE = 'forge-v63';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png'];  // essential: if any of these cannot be cached the update fails and the old version keeps working
 const OPTIONAL = ['./icon-512.png', './icon-maskable-512.png', './fonts/bricolage-forge-700.woff2', './fonts/geist-latin-wght-normal.woff2', './fonts/newsreader-latin-opsz-normal.woff2', './geist-latin-wght-normal.woff2', './newsreader-latin-opsz-normal.woff2'];  // nice to have; a missing one is fetched and cached later
 

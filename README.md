@@ -156,3 +156,27 @@ Replace the app files, then change the `CACHE` version in `sw.js` (for example, 
 ## v58
 
 - Audit fixes: atomic workout and treadmill saves, backup round trip (split included), added-exercise limits and cleanup, midnight date attribution.
+
+## v59
+
+- Forge Coach rebuilt as an on-device personal trainer: a behaviour ledger, pain log, ranked insights with research explanations, exercise ranking and swaps, stall doctor, in-session notes, finish debrief and a Brief / Ask / Review coach. Rule-based, nothing leaves the phone.
+
+## v60
+
+- Coach edge-case fixes: consistent 14-day pain window, no assumed body weight for protein targets, safe recent-event filtering, stricter backup validation, correct Ask word matching, and discard tracking after reload.
+- Added a Node regression suite: `node --test tests/coach-regressions.test.cjs`.
+
+## v63
+
+- Review fixes: restored the broken doctype (stray text at the top of the page and quirks mode), saved Coach events when the app is hidden, Off-day aware Coach Brief and Ask, bodyweight drills no longer show 0 kg, calorie questions answered in Ask, changelog order corrected.
+- `tests/coach-regressions.test.cjs` was not in the zip reviewed for v63; restore it from your copy.
+
+## v62
+
+- Fixed Off-day starts, missing-weight estimates, quick-session filtering, Coach save-failure reporting, strength-session wake lock, Three.js cleanup, lift goal modes and editable measurements. Energy estimates now require measured body weight; switching a lift-goal mode preserves typed targets.
+
+## v61
+
+- Protein advice, fatigue, recomposition, Forge Score, weekly quests, badges and Coach now use one current measured-weight source. Future-dated measurements are ignored; protein targets are withheld until a weight is logged.
+- Coach records usefulness feedback in its backed-up event ledger, keeps safety alerts visible, and hides a repeated lower-priority cue for 14 days when marked not relevant. Short follow-up questions are recognized and clarified against the preceding Ask.
+- Service-worker cache bumped to `forge-v61`.
